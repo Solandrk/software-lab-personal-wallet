@@ -46,7 +46,24 @@
       "createdAt": "2025-01-09T09:20:00.000Z"
     }
   ],
-  "budgets": [],
+  "budgets": [
+    {
+      "id": 1,
+      "month": "2025-01",
+      "amount": 60000000,
+      "alertsEnabled": true,
+      "createdAt": "2024-12-28T09:00:00.000Z",
+      "updatedAt": "2024-12-28T09:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "month": "2025-02",
+      "amount": 55000000,
+      "alertsEnabled": true,
+      "createdAt": "2025-01-28T09:00:00.000Z",
+      "updatedAt": "2025-01-28T09:00:00.000Z"
+    }
+  ],
   "metadata": {
     "currency": "IRR",
     "createdAt": "2025-01-01T00:00:00.000Z"

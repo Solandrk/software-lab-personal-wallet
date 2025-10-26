@@ -1,3 +1,5 @@
+import { BudgetForm, BudgetList } from '../features/budget'
+
 export const BudgetPage = () => {
   return (
     <section className="page" aria-labelledby="budget-heading">
@@ -9,6 +11,10 @@ export const BudgetPage = () => {
           Set monthly goals and track progress against your planned spending.
         </p>
       </header>
+
+      <BudgetForm />
+
+      <BudgetList />
     </section>
   )
 }
