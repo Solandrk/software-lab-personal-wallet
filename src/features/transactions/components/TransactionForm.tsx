@@ -1,28 +1,15 @@
-import { useMemo, useState } from 'react'
+import { useState } from 'react'
 import type { FormEvent } from 'react'
-import type { TransactionKind, TransactionInput } from '../../../types'
+import type { TransactionInput } from '../../../types'
 import { useTransactions } from '../context/TransactionsContext'
+import { TRANSACTION_CATEGORIES, TRANSACTION_TYPES } from '../constants'
 
 type TransactionFormState = Omit<TransactionInput, 'amount'> & {
   amount: string
 }
 
-const CATEGORY_OPTIONS = [
-  'General',
-  'Salary',
-  'Food',
-  'Housing',
-  'Transportation',
-  'Utilities',
-  'Healthcare',
-  'Entertainment',
-  'Education',
-  'Investment',
-  'Savings',
-]
-
 const defaultState: TransactionFormState = {
-  category: CATEGORY_OPTIONS[0],
+  category: TRANSACTION_CATEGORIES[0],
   amount: '',
   type: 'expense',
   description: '',
@@ -34,8 +21,6 @@ export const TransactionForm = () => {
   const [formState, setFormState] = useState<TransactionFormState>(defaultState)
   const [formError, setFormError] = useState<string | null>(null)
   const [isSuccess, setIsSuccess] = useState<boolean>(false)
-
-  const typeOptions = useMemo<TransactionKind[]>(() => ['income', 'expense'], [])
 
   const handleInputChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>,
@@ -103,7 +88,7 @@ export const TransactionForm = () => {
             onChange={handleInputChange}
             required
           >
-            {CATEGORY_OPTIONS.map((category) => (
+            {TRANSACTION_CATEGORIES.map((category) => (
               <option key={category} value={category}>
                 {category}
               </option>
@@ -134,7 +119,7 @@ export const TransactionForm = () => {
             onChange={handleInputChange}
             required
           >
-            {typeOptions.map((type) => (
+            {TRANSACTION_TYPES.map((type) => (
               <option key={type} value={type}>
                 {type.charAt(0).toUpperCase() + type.slice(1)}
               </option>
