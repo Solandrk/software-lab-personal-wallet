@@ -1,3 +1,5 @@
+import { TransactionForm } from '../features/transactions'
+
 export const DashboardPage = () => {
   return (
     <section className="page" aria-labelledby="dashboard-heading">
@@ -9,6 +11,8 @@ export const DashboardPage = () => {
           Track daily inflows and outflows to stay aligned with your budget.
         </p>
       </header>
+
+      <TransactionForm />
     </section>
   )
 }

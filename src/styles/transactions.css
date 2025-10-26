@@ -1,0 +1,124 @@
+.transaction-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.75rem;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.transaction-form__header h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.transaction-form__header p {
+  margin: 0.25rem 0 0;
+  color: var(--color-text-muted);
+}
+
+.transaction-form__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem 1.25rem;
+}
+
+.transaction-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+}
+
+.transaction-form__field span {
+  font-weight: 500;
+}
+
+.transaction-form__field input,
+.transaction-form__field select,
+.transaction-form__field textarea {
+  width: 100%;
+  padding: 0.7rem 0.85rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background: var(--color-surface-elevated);
+  color: var(--color-text);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.transaction-form__field textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.transaction-form__field input:focus,
+.transaction-form__field select:focus,
+.transaction-form__field textarea:focus {
+  outline: none;
+  border-color: rgba(37, 99, 235, 0.45);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.transaction-form__footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.transaction-form__status {
+  min-height: 1.25rem;
+  font-size: 0.9rem;
+}
+
+.transaction-form__error {
+  color: #dc2626;
+  font-weight: 500;
+}
+
+.transaction-form__success {
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+.transaction-form__submit {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.75rem 1.6rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.2s ease;
+}
+
+.transaction-form__submit:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.transaction-form__submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+@media (max-width: 540px) {
+  .transaction-form {
+    padding: 1.35rem;
+  }
+
+  .transaction-form__footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .transaction-form__submit {
+    width: 100%;
+    justify-content: center;
+  }
+}
