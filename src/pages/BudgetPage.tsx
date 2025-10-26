@@ -1,4 +1,4 @@
-import { BudgetForm, BudgetList } from '../features/budget'
+import { BudgetAlerts, BudgetForm, BudgetList } from '../features/budget'
 
 export const BudgetPage = () => {
   return (
@@ -11,6 +11,8 @@ export const BudgetPage = () => {
           Set monthly goals and track progress against your planned spending.
         </p>
       </header>
+
+      <BudgetAlerts />
 
       <BudgetForm />
 

@@ -1,4 +1,5 @@
 import { TransactionForm, TransactionList, WalletSummary } from '../features/transactions'
+import { BudgetAlerts } from '../features/budget'
 
 export const DashboardPage = () => {
   return (
@@ -13,6 +14,8 @@ export const DashboardPage = () => {
       </header>
 
       <WalletSummary />
+
+      <BudgetAlerts />
 
       <TransactionForm />
 
