@@ -4,6 +4,7 @@ import type { Transaction, TransactionFilters } from '../../../types'
 import { formatCurrency, formatDate } from '../../../utils'
 import { useTransactions } from '../context/TransactionsContext'
 import { TRANSACTION_CATEGORIES, TRANSACTION_TYPES } from '../constants'
+import { downloadTransactionsCsv } from '../utils/export'
 
 type TransactionFilterState = {
   query: string
@@ -117,6 +118,11 @@ export const TransactionList = () => {
 
   const activeFilters = hasActiveFilters(filters)
 
+  const handleExport = () => {
+    if (!filteredTransactions.length) return
+    downloadTransactionsCsv(filteredTransactions)
+  }
+
   const totals = useMemo(() => {
     return filteredTransactions.reduce(
       (acc, transaction) => {
@@ -163,15 +169,25 @@ export const TransactionList = () => {
             {filteredTransactions.length !== transactions.length && ` of ${transactions.length}`} records
           </p>
         </div>
-        {activeFilters && (
+        <div className="transaction-list__actions">
           <button
             type="button"
-            className="transaction-list__reset"
-            onClick={handleResetFilters}
+            className="transaction-list__export"
+            onClick={handleExport}
+            disabled={!filteredTransactions.length}
           >
-            Clear filters
+            Export CSV
           </button>
-        )}
+          {activeFilters && (
+            <button
+              type="button"
+              className="transaction-list__reset"
+              onClick={handleResetFilters}
+            >
+              Clear filters
+            </button>
+          )}
+        </div>
       </header>
 
       <div className="transaction-list__filters" role="group" aria-label="Transaction filters">
