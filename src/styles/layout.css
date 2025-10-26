@@ -1,0 +1,134 @@
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2.5rem;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(212, 224, 238, 0.7);
+}
+
+.brand {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.brand__accent {
+  color: var(--color-primary);
+}
+
+.app-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(37, 99, 235, 0.08);
+  padding: 0.45rem;
+  border-radius: 999px;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-text);
+}
+
+.nav-link.nav-link--active {
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  box-shadow: var(--shadow-sm);
+}
+
+.app-content {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  padding: 2.5rem 2rem 3rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.page-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.page-header__title {
+  font-size: 2.15rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+}
+
+.page-header__subtitle {
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  max-width: 540px;
+}
+
+@media (max-width: 900px) {
+  .app-header {
+    padding: 1.25rem 1.5rem;
+    gap: 1.25rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .app-nav {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .app-content {
+    padding: 2rem 1.5rem 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .app-nav {
+    gap: 0.5rem;
+    padding: 0.35rem;
+  }
+
+  .nav-link {
+    flex: 1;
+    padding: 0.45rem 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .page-header__title {
+    font-size: 1.8rem;
+  }
+}
