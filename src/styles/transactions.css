@@ -123,6 +123,128 @@
   }
 }
 
+.wallet-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+  padding: 1.75rem;
+  background: linear-gradient(145deg, rgba(24, 51, 114, 0.08), rgba(37, 99, 235, 0.05));
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(212, 224, 238, 0.55);
+  box-shadow: var(--shadow-md);
+}
+
+.wallet-summary__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.wallet-summary__header h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.wallet-summary__header p {
+  margin: 0.35rem 0 0;
+  color: var(--color-text-muted);
+}
+
+.wallet-summary__status {
+  font-size: 0.9rem;
+  color: var(--color-primary);
+}
+
+.wallet-summary__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.2rem;
+}
+
+.wallet-summary__card {
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  box-shadow: 0 12px 25px rgba(15, 23, 42, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.wallet-summary__card h3 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+}
+
+.wallet-summary__value {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.wallet-summary__meta {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.wallet-summary__card--balance {
+  background: linear-gradient(135deg, #2563eb, #4338ca);
+  color: #ffffff;
+}
+
+.wallet-summary__card--balance h3,
+.wallet-summary__card--balance .wallet-summary__meta {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.wallet-summary__card--income {
+  border: 1px solid rgba(22, 163, 74, 0.3);
+}
+
+.wallet-summary__card--income .wallet-summary__value {
+  color: #16a34a;
+}
+
+.wallet-summary__card--expense {
+  border: 1px solid rgba(220, 38, 38, 0.3);
+}
+
+.wallet-summary__card--expense .wallet-summary__value {
+  color: #dc2626;
+}
+
+.wallet-summary__footer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  border-top: 1px dashed rgba(148, 163, 184, 0.4);
+  padding-top: 0.75rem;
+}
+
+.wallet-summary__footer-label {
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .wallet-summary {
+    padding: 1.35rem;
+  }
+
+  .wallet-summary__value {
+    font-size: 1.5rem;
+  }
+}
+
 .transaction-list {
   display: flex;
   flex-direction: column;

@@ -2,4 +2,5 @@ export { TransactionsProvider, useTransactions } from './context/TransactionsCon
 export { fetchTransactions, createTransaction } from './api'
 export { TransactionForm } from './components/TransactionForm'
 export { TransactionList } from './components/TransactionList'
+export { WalletSummary } from './components/WalletSummary'
 export { TRANSACTION_CATEGORIES, TRANSACTION_TYPES } from './constants'

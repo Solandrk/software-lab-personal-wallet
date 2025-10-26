@@ -1,4 +1,4 @@
-import { TransactionForm, TransactionList } from '../features/transactions'
+import { TransactionForm, TransactionList, WalletSummary } from '../features/transactions'
 
 export const DashboardPage = () => {
   return (
@@ -11,6 +11,8 @@ export const DashboardPage = () => {
           Track daily inflows and outflows to stay aligned with your budget.
         </p>
       </header>
+
+      <WalletSummary />
 
       <TransactionForm />
 
