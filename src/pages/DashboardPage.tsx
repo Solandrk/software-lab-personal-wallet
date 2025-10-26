@@ -1,4 +1,4 @@
-import { TransactionForm } from '../features/transactions'
+import { TransactionForm, TransactionList } from '../features/transactions'
 
 export const DashboardPage = () => {
   return (
@@ -13,6 +13,8 @@ export const DashboardPage = () => {
       </header>
 
       <TransactionForm />
+
+      <TransactionList />
     </section>
   )
 }

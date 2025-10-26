@@ -1,5 +1,51 @@
 {
-  "transactions": [],
+  "transactions": [
+    {
+      "id": 1,
+      "category": "Salary",
+      "amount": 85000000,
+      "type": "income",
+      "description": "Monthly salary",
+      "date": "2025-01-01T08:00:00.000Z",
+      "createdAt": "2025-01-01T08:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "category": "Housing",
+      "amount": 18000000,
+      "type": "expense",
+      "description": "Rent payment",
+      "date": "2025-01-03T10:30:00.000Z",
+      "createdAt": "2025-01-03T10:30:00.000Z"
+    },
+    {
+      "id": 3,
+      "category": "Transportation",
+      "amount": 1500000,
+      "type": "expense",
+      "description": "Ride hailing and metro top-up",
+      "date": "2025-01-05T12:15:00.000Z",
+      "createdAt": "2025-01-05T12:15:00.000Z"
+    },
+    {
+      "id": 4,
+      "category": "Food",
+      "amount": 4200000,
+      "type": "expense",
+      "description": "Groceries for the week",
+      "date": "2025-01-07T16:45:00.000Z",
+      "createdAt": "2025-01-07T16:45:00.000Z"
+    },
+    {
+      "id": 5,
+      "category": "Investment",
+      "amount": 12000000,
+      "type": "income",
+      "description": "Dividends payout",
+      "date": "2025-01-09T09:20:00.000Z",
+      "createdAt": "2025-01-09T09:20:00.000Z"
+    }
+  ],
   "budgets": [],
   "metadata": {
     "currency": "IRR",
