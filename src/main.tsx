@@ -5,6 +5,7 @@ import './index.css'
 import App from './App.tsx'
 import { BudgetProvider } from './features/budget'
 import { TransactionsProvider } from './features/transactions'
+import { registerSW } from 'virtual:pwa-register'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -17,3 +18,7 @@ createRoot(document.getElementById('root')!).render(
     </BrowserRouter>
   </StrictMode>,
 )
+
+registerSW({
+  immediate: import.meta.env.DEV,
+})
