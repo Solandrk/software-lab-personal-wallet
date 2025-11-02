@@ -1,6 +1,35 @@
 {
   "transactions": [
     {
+      "id": 8,
+      "category": "Food",
+      "amount": 200000,
+      "type": "expense",
+      "description": "22",
+      "date": "2025-10-27T00:00:00.000Z",
+      "createdAt": "2025-10-26T15:26:42.614Z",
+      "updatedAt": "2025-10-26T15:26:42.614Z"
+    },
+    {
+      "id": 7,
+      "category": "Utilities",
+      "amount": 200000,
+      "type": "income",
+      "description": "ننننن",
+      "date": "2025-10-27T00:00:00.000Z",
+      "createdAt": "2025-10-26T15:25:40.212Z",
+      "updatedAt": "2025-10-26T15:25:40.212Z"
+    },
+    {
+      "id": 6,
+      "category": "Housing",
+      "amount": 6000,
+      "type": "income",
+      "date": "2025-10-27T00:00:00.000Z",
+      "createdAt": "2025-10-26T15:25:12.812Z",
+      "updatedAt": "2025-10-26T15:25:12.812Z"
+    },
+    {
       "id": 1,
       "category": "Salary",
       "amount": 85000000,
@@ -48,20 +77,20 @@
   ],
   "budgets": [
     {
+      "id": 2,
+      "month": "2025-10",
+      "amount": 20000,
+      "alertsEnabled": true,
+      "createdAt": "2025-10-26T15:26:31.458Z",
+      "updatedAt": "2025-10-26T15:26:31.458Z"
+    },
+    {
       "id": 1,
       "month": "2025-01",
       "amount": 60000000,
       "alertsEnabled": true,
       "createdAt": "2024-12-28T09:00:00.000Z",
       "updatedAt": "2024-12-28T09:00:00.000Z"
-    },
-    {
-      "id": 2,
-      "month": "2025-02",
-      "amount": 55000000,
-      "alertsEnabled": true,
-      "createdAt": "2025-01-28T09:00:00.000Z",
-      "updatedAt": "2025-01-28T09:00:00.000Z"
     }
   ],
   "metadata": {
